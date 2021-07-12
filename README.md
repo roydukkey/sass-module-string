@@ -1,4 +1,4 @@
-# sass-meta
+# sass-string
 
 [![Release Version](https://img.shields.io/npm/v/sass-string.svg)](https://www.npmjs.com/package/sass-string)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
