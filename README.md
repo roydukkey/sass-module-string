@@ -36,6 +36,9 @@ sass.render({
 
 <dl>
 
+  <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_ends-with.sass"><code>ends-with ( $string, $substring [, $end-at] )</code></a></dt>
+  <dd>Determines whether a source string ends with the characters of a specified substring, returning true or false as appropriate.</dd>
+
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_from.sass"><code>from ( $value )</code></a></dt>
   <dd>Creates a string from the provided value.</dd>
 
