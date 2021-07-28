@@ -7,6 +7,7 @@
 
 * Fix package name in README
 * Add enhanced `.index()` function [#2](https://github.com/roydukkey/sass-module-string/issues/2)
+* Add `.starts-with()` function [#1](https://github.com/roydukkey/sass-module-string/issues/1)
 * Remove `*.github` and `*.vscode` folders from package
 
 ## 1.0.0
