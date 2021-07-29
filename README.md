@@ -59,4 +59,4 @@ In order to avoid constantly declaring both the native 'sass:string' module and 
 @use 'sass-string/string';
 ```
 
-*Note:* Since its functionality is enhanced by this library, the combined API hides the native `list.index()` function.
+*Note:* Since its functionality is enhanced by this library, the combined API hides the native `string.index()` function.
