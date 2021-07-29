@@ -39,6 +39,9 @@ sass.render({
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_from.sass"><code>from ( $value )</code></a></dt>
   <dd>Creates a string from the provided value.</dd>
 
+  <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_index.sass"><code>index ( $string, $substring [, $from-index] )</code></a></dt>
+  <dd>Returns the first index at which a specified substring can be found in a string; otherwise, 0 is returned, indicating the substring is not present.</dd>
+
 </dl>
 
 Don't see the function you're looking for? Request a [new feature](//github.com/roydukkey/sass-module-string/issues/new) describing a use case.
@@ -55,3 +58,5 @@ In order to avoid constantly declaring both the native 'sass:string' module and 
 // ...this statement will accomplish the same thing.
 @use 'sass-string/string';
 ```
+
+*Note:* Since its functionality is enhanced by this library, the combined API hides the native `string.index()` function.
