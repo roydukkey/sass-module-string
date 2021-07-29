@@ -37,7 +37,7 @@ sass.render({
 <dl>
 
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_ends-with.sass"><code>ends-with ( $string, $substring [, $end-at] )</code></a></dt>
-  <dd>Determines whether a source string ends with the characters of a specified substring, returning true or false as appropriate.</dd>
+  <dd>Determines whether a string ends with the characters of a specified substring, returning true or false as appropriate.</dd>
 
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_from.sass"><code>from ( $value )</code></a></dt>
   <dd>Creates a string from the provided value.</dd>
@@ -46,7 +46,7 @@ sass.render({
   <dd>Returns the first index at which a specified substring can be found in a string; otherwise, 0 is returned, indicating the substring is not present.</dd>
 
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_starts-with.sass"><code>starts-with ( $string, $substring [, $start-at] )</code></a></dt>
-  <dd>Determines whether a source string begins with the characters of a specified substring, returning true or false as appropriate.</dd>
+  <dd>Determines whether a string begins with the characters of a specified substring, returning true or false as appropriate.</dd>
 
 </dl>
 
