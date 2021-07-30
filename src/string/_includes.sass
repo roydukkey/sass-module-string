@@ -1,0 +1,43 @@
+// Copyright (c) roydukkey. All rights reserved.
+// Licensed under the MIT. See LICENSE file in the project root for full license information.
+////
+/// @author roydukkey
+/// @group api
+////
+
+@use 'sass:meta'
+@use 'sass:string'
+@use 'sass-exception/src/exception/parameter-type' as parameter-type
+@use 'sass-exception/src/exception/validate-index' as validate-index
+@use 'index'
+
+
+///
+/// Determines whether a string includes with the characters of a specified substring, returning true or false as appropriate.
+///
+/// @param {String} $string - The source string in which the substring is to be located.
+/// @param {String} $substring - The substring to locate in the source string.
+/// @param {Number} $from-index [1] - The index at which to begin the search. A negative index can be used, indicating an offset from the end of the source string.
+/// @return {Number}
+///
+/// @throw `#{$string|$substring}` is not a string.
+/// @throw `#{$from-index}` is not a number.
+///
+/// @access public
+/// @require parameter-type.parameter-type
+/// @require validate-index.validate-index
+///
+@function includes($string, $substring, $from-index: 1)
+
+	@if meta.type-of($string) != 'string'
+		@error parameter-type.parameter-type('includes', 'string', $string, 'string')
+
+	@if meta.type-of($substring) != 'string'
+		@error parameter-type.parameter-type('includes', 'substring', $substring, 'string')
+
+	$from-index: validate-index.validate-index('includes', 'from-index', $from-index, $string)
+
+	@if meta.type-of($from-index) != 'number'
+		@error $from-index
+
+	@return index.index($string, $substring, $from-index) != 0
