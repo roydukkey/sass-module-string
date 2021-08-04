@@ -5,6 +5,7 @@
 /// @group api
 ////
 
+@use 'sass:math'
 @use 'sass:meta'
 @use 'sass:string'
 @use 'sass-exception/src/exception/parameter-type' as parameter-type
@@ -39,10 +40,12 @@
 	@if meta.type-of($from-index) != 'number'
 		@error $from-index
 
-	@if $from-index < string.length($string) * -1
+	$length: string.length($string)
+
+	@if $from-index < $length * -1
 		$from-index: 1
 
 	$string: string.index(string.slice($string, $from-index), $substring)
 
-	@return if($string, $string + $from-index - 1, 0)
+	@return if($string, $string + math.min($from-index, $length) - 1, 0)
 
