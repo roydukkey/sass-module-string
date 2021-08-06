@@ -42,7 +42,7 @@ sass.render({
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_from.sass"><code>from ( $value )</code></a></dt>
   <dd>Creates a string from the provided value.</dd>
 
-  <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_index.sass"><code>index ( $string, $substring [, $from-index] )</code></a></dt>
+  <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_index.sass"><code>index ( $string, $substring [, $start-at] )</code></a></dt>
   <dd>Returns the first index at which a specified substring can be found in a string; otherwise, 0 is returned, indicating the substring is not present.</dd>
 
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_last-index.sass"><code>last-index ( $string, $substring [, $end-index] )</code></a></dt>

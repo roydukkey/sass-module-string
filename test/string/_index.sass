@@ -72,7 +72,7 @@
 		$expected: 'ERROR: $substring: `null` is not a string for `index()`.'
 		@include true.assert-equal($assert, $expected)
 
-	@include true.it('Throws when $from-index is not a number')
+	@include true.it('Throws when $start-at is not a number')
 		$assert: src.index('', '', null)
-		$expected: 'ERROR: $from-index: `null` is not a number for `index()`.'
+		$expected: 'ERROR: $start-at: `null` is not a number for `index()`.'
 		@include true.assert-equal($assert, $expected)
