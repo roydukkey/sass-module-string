@@ -10,69 +10,64 @@
 @use 'true'
 
 
-@include true.describe('@function src.index')
+@include true.describe('@function src.last-index')
 
 	// cSpell:disable-next-line
 	$string: 'abcdefgabcdefg'
 
 	@include true.it('Does get an index')
-		$assert: src.index($string, 'd')
-		$expected: 4
+		$assert: src.last-index($string, 'd')
+		$expected: 11
 		@include true.assert-equal($assert, $expected, '[d]')
 
-		$assert: src.index($string, 'ga')
+		$assert: src.last-index($string, 'ga')
 		$expected: 7
 		@include true.assert-equal($assert, $expected, '[ga]')
 
 	@include true.it('Does get an index from a positive (+) offset')
-		$assert: src.index($string, 'b', 6)
-		$expected: 9
+		$assert: src.last-index($string, 'b', 6)
+		$expected: 2
 		@include true.assert-equal($assert, $expected, '[b]')
 
-		$assert: src.index($string, 'ef', 6)
-		$expected: 12
+		$assert: src.last-index($string, 'ef', 6)
+		$expected: 5
 		@include true.assert-equal($assert, $expected, '[ef]')
 
 	@include true.it('Does get an index from a negative (-) offset')
-		$assert: src.index($string, 'b', -6)
+		$assert: src.last-index($string, 'b', -6)
 		$expected: 9
 		@include true.assert-equal($assert, $expected, '[b]')
 
-		$assert: src.index($string, 'cd', -6)
-		$expected: 10
+		$assert: src.last-index($string, 'cd', -6)
+		$expected: 3
 		@include true.assert-equal($assert, $expected, '[cd]')
 
-	@include true.it('Return length when offset exceeds length')
-		$assert: src.index($string, '', string.length($string) + 1)
-		$expected: string.length($string)
+	@include true.it('Does get an index even when a positive (+) offset exceeds length ')
+		$assert: src.last-index($string, 'c', string.length($string) + 1)
+		$expected: 10
 		@include true.assert-equal($assert, $expected)
 
-	@include true.it('Does not get an index even when a positive (+) offset exceeds length ')
-		$assert: src.index($string, 'c', string.length($string) + 1)
+	@include true.it('Does not get an index even when a negative (-) offset exceeds length ')
+		$assert: src.last-index($string, 'c', string.length($string) * -1 - 1)
 		$expected: 0
 		@include true.assert-equal($assert, $expected)
 
-	@include true.it('Does get an index even when a negative (-) offset exceeds length ')
-		$assert: src.index($string, 'c', string.length($string) * -1 - 1)
-		$expected: 3
-		@include true.assert-equal($assert, $expected)
-
 	@include true.it('Return zero when a character is not present')
-		$assert: src.index($string, 'z')
+		$assert: src.last-index($string, 'z')
 		$expected: 0
 		@include true.assert-equal($assert, $expected)
 
 	@include true.it('Throws when $string is not a string')
-		$assert: src.index(null, null)
-		$expected: 'ERROR: $string: `null` is not a string for `index()`.'
+		$assert: src.last-index(null, null)
+		$expected: 'ERROR: $string: `null` is not a string for `last-index()`.'
 		@include true.assert-equal($assert, $expected)
 
 	@include true.it('Throws when $substring is not a string')
-		$assert: src.index('', null)
-		$expected: 'ERROR: $substring: `null` is not a string for `index()`.'
+		$assert: src.last-index('', null)
+		$expected: 'ERROR: $substring: `null` is not a string for `last-index()`.'
 		@include true.assert-equal($assert, $expected)
 
-	@include true.it('Throws when $start-at is not a number')
-		$assert: src.index('', '', null)
-		$expected: 'ERROR: $start-at: `null` is not a number for `index()`.'
+	@include true.it('Throws when $end-at is not a number')
+		$assert: src.last-index('', '', null)
+		$expected: 'ERROR: $end-at: `null` is not a number for `last-index()`.'
 		@include true.assert-equal($assert, $expected)
