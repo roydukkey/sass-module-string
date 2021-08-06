@@ -41,6 +41,6 @@
 	@if meta.type-of($end-at) != 'number'
 		@error $end-at
 
-	$from-index: $end-at - string.length($substring) + 1
+	$start-at: $end-at - string.length($substring) + 1
 
-	@return index.index($string, $substring, $from-index) == $from-index
+	@return index.index($string, $substring, $start-at) == $start-at
