@@ -43,7 +43,7 @@ sass.render({
   <dd>Creates a string from the provided value.</dd>
 
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_includes.sass"><code>includes ( $string, $substring [, $from-index] )</code></a></dt>
-  <dd>Determines whether a string includes with the characters of a specified substring, returning true or false as appropriate.</dd>
+  <dd>Determines whether a string includes the characters of a specified substring, returning true or false as appropriate.</dd>
 
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_index.sass"><code>index ( $string, $substring [, $from-index] )</code></a></dt>
   <dd>Returns the first index at which a specified substring can be found in a string; otherwise, 0 is returned, indicating the substring is not present.</dd>
