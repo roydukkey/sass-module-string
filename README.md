@@ -45,6 +45,9 @@ sass.render({
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_index.sass"><code>index ( $string, $substring [, $from-index] )</code></a></dt>
   <dd>Returns the first index at which a specified substring can be found in a string; otherwise, 0 is returned, indicating the substring is not present.</dd>
 
+  <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_last-index.sass"><code>last-index ( $string, $substring [, $end-index] )</code></a></dt>
+  <dd>Returns the last index at which a specified substring can be found in a string; otherwise, 0 is returned, indicating the substring is not present. The string is searched forwards, ending at a given index when specified.</dd>
+
   <dt><a href="//github.com/roydukkey/sass-module-string/tree/master/src/string/_starts-with.sass"><code>starts-with ( $string, $substring [, $start-at] )</code></a></dt>
   <dd>Determines whether a string begins with the characters of a specified substring, returning true or false as appropriate.</dd>
 
