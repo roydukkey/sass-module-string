@@ -1,7 +1,7 @@
 {
 	"name": "sass-string",
 	"description": "This Sass module provides more advanced string functions",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"author": "roydukkey",
 	"license": "MIT",
 	"repository": {
