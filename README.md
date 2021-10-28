@@ -1,3 +1,8 @@
+**Renamed!**
+This package has been renamed to [`@sass-fairy/string`](https://github.com/roydukkey/sass-fairy/tree/master/packages/string#readme) and organised in a mono-repo for better maintainablity, an improved user experience, and [full documentation](https://sass-fairy.com/api/string). Explore more about the change at [sass-fairy.com](https://sass-fairy.com).
+
+---
+
 # sass-string
 
 [![Release Version](https://img.shields.io/npm/v/sass-string.svg)](https://www.npmjs.com/package/sass-string)
